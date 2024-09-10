@@ -1,15 +1,28 @@
 # latest-release-tag
 
-Sometimes we need te combine software from differenct projects in one product.
-This github action gets the the tagname of the latest release from a github repository.
+Sometimes we need te combine software from different projects in one product.
+This github action gets the tagname of the latest release from a github repository.
 
-It can be used to download an asset from a repository to be used in another project.
+It can be used to download an asset from the questioned repository.
+
+## inputs
+
+```yaml
+owner: string
+repo: string
+```
+
+## outputs
+
+```yaml
+latest: string
+```
 
 ## Usage
 
 <!-- start usage -->
 ```yaml
-name: "Publish Immutable Action Version"
+name: "Build a docker image"
 
 on:
   push:
@@ -25,7 +38,7 @@ jobs:
       id: latest-release
       uses: paulusminus/latest-release-tag@v1
     - name: Download the latest-release
-      run: mkdir -p download && wget -qO- &{URL} | tar xz -C download
+      run: mkdir -p download && wget -qO- ${URL} | tar xz -C download
       env:
         URL: https://github.com/paulusminus/lipl-control/releases/download/${{ steps.latest-release.outputs.latest }}/lipl-pwa.tar.gz
 ```
