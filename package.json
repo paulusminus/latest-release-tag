@@ -1,7 +1,7 @@
 {
-  "name": "rollup-test",
-  "version": "1.0.0",
-  "description": "Testing rollup",
+  "name": "action-latest-release",
+  "version": "0.1.0",
+  "description": "Github action to get the latest tagname from a repository release",
   "main": "index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
