@@ -19,8 +19,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-    - name: Report node version
-      run: node --version
     - name: Check out repo
       uses: actions/checkout@v4
     - name: Get the latest release from paulusminus/lipl-control

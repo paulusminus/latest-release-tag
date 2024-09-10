@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Report node version
+        run: node --version
+
       - name: Checkout
         uses: actions/checkout@v4
 
