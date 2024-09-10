@@ -1,5 +1,5 @@
 {
-  "name": "action-latest-release",
+  "name": "latest-release-tag",
   "version": "0.1.0",
   "description": "Github action to get the latest tagname from a repository release",
   "main": "index.mjs",
