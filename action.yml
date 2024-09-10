@@ -1,0 +1,23 @@
+---
+name: Get the tagname of the latest release
+description: Get the tagname of the latest release
+author: Paul Min
+
+branding:
+  icon: heart
+  color: red
+
+inputs:
+  owner:
+    description: Owner of the github repository
+    required: true
+  repo:
+    description: Name of the github repository
+
+outputs:
+  latest:
+    description: Tagname of the latest release
+
+runs:
+  using: node20
+  main: index.mjs
