@@ -19,5 +19,5 @@ outputs:
     description: Tagname of the latest release
 
 runs:
-  using: node20
+  using: node24
   main: index.mjs
